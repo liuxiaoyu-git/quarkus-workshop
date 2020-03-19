@@ -66,7 +66,7 @@ Add a new test in the existing `GreetingResourceTest` class that tests the `/hel
 
 Let's test our app. In Che, using the same command palette, double-click on **Run Quarkus Tests**:
 
-image::testcmd.png[testcmd,600]
+image::images/testcmd.png[testcmd,600]
 
 The tests will run, and eventually complete. Did you get any errors? You should have! You probably got:
 
@@ -105,7 +105,7 @@ It is also possible to directly inject the URL into the test which can make is e
 
 Let’s write a simple test that shows this off to load some static resources. First create a simple HTML file in `src/main/resources/META-INF/resources/`. Right-click on this directory and select _New -> HTML File_. Name the file `test` in the dialog box (which will cause the final filename to be `test.html`):
 
-image::createhtml.png[html,500]
+image::images/createhtml.png[html,500]
 
 Between the `<title></title>` tags, add `Testing with Quarkus`. Our test will verify this string.
 
