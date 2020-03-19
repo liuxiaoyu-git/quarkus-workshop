@@ -67,7 +67,7 @@ Like many other Quarkus frameworks, sensible defaults and out of the box functio
 
 First, re-build the app using the command palette and selecting **Create Executable JAR**.
 
-image:createexec.png[create,600]
+image:images/createexec.png[create,600]
 
 Once that's done, run the following command to re-deploy:
 
@@ -96,7 +96,7 @@ echo ; echo http://$(oc get route people -o=go-template --template={% raw %}'{{ 
 
 Open that URL in a separate browser tab, and exercise the table a bit by paging through the entries to force several RESTful calls back to our app:
 
-image::paging.png[paging,600]
+image::images/paging.png[paging,600]
 
 == Inspect traces
 
@@ -109,15 +109,15 @@ echo; echo http://$(oc get route jaeger-query -o=go-template --template={% raw %
 
 Open that URL in a separate tab to arrive at the Jaeger Tracing console (leave the tab open as we'll use it later)
 
-image::jaegerui.png[jaeger,600]
+image::images/jaegerui.png[jaeger,600]
 
 Using the menu on the left, select the `people` Service, and click **Find Traces**. Jaeger will show the collected traces on the right:
 
-image::find1.png[jaeger,600]
+image::images/find1.png[jaeger,600]
 
 Click on one of the traces from "a few seconds ago" to show the individual _spans_ of each trace:
 
-image::trace1.png[jaeger,600]
+image::images/trace1.png[jaeger,600]
 
 You can see that this trace (along with the others) shows the incoming HTTP GET operation to the `/datatable` endpoint we created earlier, along with the time it took, and other ancillary info about the request. Not terribly interesting as it's a single call, but you can imagine with a real world app and multiple microservices working together, that traces could reveal a lot of detail.
 
@@ -268,7 +268,7 @@ public List<StarWarsPerson> getCharacters() {
 
 First, re-build the app using the command palette and selecting **Create Executable JAR**.
 
-image:createexec.png[create,600]
+image:images/createexec.png[create,600]
 
 Once that's done, run the following command to re-deploy:
 
@@ -327,11 +327,11 @@ You should see:
 
 Go back to the Jaeger console tab, and click **Find Traces**. The new trace should appear the top with multiple spans. Click on it to display details:
 
-image::swpeople.png[swpeople,800]
+image::images/swpeople.png[swpeople,800]
 
 You can see that this trace (along with the others) shows multiple spans: the incoming HTTP GET operation to the `/swperson` endpoint we created earlier, and the external calls to the Star Wars API. Expand the traces to show the detail:
 
-image::swpeopleext.png[swpeopleext,800]
+image::images/swpeopleext.png[swpeopleext,800]
 
 == Extra credit: Explicit method tracing
 
