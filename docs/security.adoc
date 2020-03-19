@@ -108,7 +108,7 @@ public class JWTResource {
 
 First, re-build the app using the command palette and selecting **Create Executable JAR**.
 
-image:createexec.png[create,600]
+image:images/createexec.png[create,600]
 
 Once that's done, run the following command to re-deploy:
 
@@ -292,11 +292,11 @@ mvn quarkus:add-extension -Dextensions="oidc, keycloak-authorization, resteasy-j
 
 Since we will use Keycloak authentication rather than JWT, we'll need to disable the JWT extension. Open the `pom.xml` file and drag to select the `quarkus-smallrye-jwt` extension (including the beginning `<dependency>` and ending `</dependency>` lines)
 
-image:jwt-comment1.png[create,700]
+image:images/jwt-comment1.png[create,700]
 
 Delete these lines or simply comment them out using kbd:[CTRL+/] (or kbd:[CMD+/] on Mac OS X):
 
-image:jwt-comment2.png[create,700]
+image:images/jwt-comment2.png[create,700]
 
 
 === Configuring Keycloak
@@ -367,7 +367,7 @@ public class KeycloakResource {
 
 First, re-build the app using the command palette and selecting **Create Executable JAR**.
 
-image:createexec.png[create,600]
+image:images/createexec.png[create,600]
 
 Once that's done, run the following command to re-deploy:
 
