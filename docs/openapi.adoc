@@ -92,19 +92,19 @@ quarkus.swagger-ui.always-include=true
 
 Since our app is still running, click on the _Preview URL_ shown at the top of the terminal (on the _Start Live Coding_ tab). Then, add `/swagger-ui` to the end of the URL to access the Swagger UI and play with your API.
 
-image::swagger.png[swagger,600]
+image::images/swagger.png[swagger,600]
 
 Using the UI, expand the `/person/birth/before/{year}` endpoint. Here you can basic detail about the endpoint: the name of the endpoint, parameters and their type, and the response type one can expect.
 
-image::swaggeryear.png[swaggeryear,600]
+image::images/swaggeryear.png[swaggeryear,600]
 
 Click the **Try it out** button to expand the box allowing you to try it. Enter the year `1990` in the box and click **Execute**:
 
-image::swaggeryeartest.png[swaggeryeartest,600]
+image::images/swaggeryeartest.png[swaggeryeartest,600]
 
 This accesses the endpoint in the same way that `curl` does, and shows you the result (along with corresponding metadata in the HTTP response):
 
-image::swaggeryeartestresult.png[swaggeryeartestresult,600]
+image::images/swaggeryeartestresult.png[swaggeryeartestresult,600]
 
 Pretty handy way to test out your APIs!
 
@@ -182,7 +182,7 @@ public List<Person> getBeforeYear(
 
 Now reload the same Swagger UI webpage (and expand the `/person/birth/before/{year}` section). Notice the Swagger documention is more filled out for the endpoint to which we added extra OpenAPI documentation:
 
-image::swaggerparams.png[swaggerparams,600]
+image::images/swaggerparams.png[swaggerparams,600]
 
 == Congratulations
 
