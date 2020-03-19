@@ -39,13 +39,13 @@ In _Live Coding_ mode, Quarkus apps also listen for debugger connections on port
 
 To connect to the running app, use the _Run > Edit Debug Configurations_ menu command. In the dialog, Click the `+` button next to `JAVA` to create a new Java debug configuration. You can name it whatever you want, but keep the `localhost` field as-is and select port `5005` in the port selection field:
 
-image::debugconfig.png[debugconfig,600]
+image::images/debugconfig.png[debugconfig,600]
 
 Click **Save** to save this configuration, and then click **Debug** to attach the debugger to our running Quarkus app. The debugger view will appear at the bottom of the screen with several small buttons used to start/stop execution, step into/over/out of code, and other operations.
 
 You can switch between the debug pane and the Terminal panes using the small icons to the left of the debugger window:
 
-image::buttons.png[buttons, 600]
+image::images/buttons.png[buttons, 600]
 
 == Set a Breakpoint
 
@@ -53,7 +53,7 @@ To debug the app, let's step through our function that has the bug. In the left 
 
 > **NOTE** - your line numbers may be different depending on where you placed this code in the file.
 
-image::break.png[breakpoint,800]
+image::images/break.png[breakpoint,800]
 
 == Trigger the bug
 
@@ -66,7 +66,7 @@ curl http://localhost:8080/hello/lastletter/foo
 
 This time, the command will appear to hang as the breakpoint has been reached. The line where you set the breakpoint will be highlighted. Click the Debugger button to go back to the debugger, which has paused the execution at the breakpoint:
 
-image::breakreached.png[breakpointreached]
+image::images/breakreached.png[breakpointreached]
 
 You will see three main sections of the debug view:
 
@@ -78,13 +78,13 @@ You will see three main sections of the debug view:
 
 You can use the various buttons to step across code:
 
-image::debugbuttons.png[debugbuttons, 800]
+image::images/debugbuttons.png[debugbuttons, 800]
 
 Step over the current line by clicking **Step Over**. This will fully execute the current line, and advance to the next line in the code and stop again. (You could also step _into_ methods for deeper debugging).
 
 At this point, `len` is defined (and listed on the right side):
 
-image::len.png[length, 800]
+image::images/len.png[length, 800]
 
 Click **Step Over** again, which executes the line to grab the last letter using `len` an offset to the `substring` method. See the bug? Look at the value of `lastLetter` in the variables list on the right - it's empty!
 
